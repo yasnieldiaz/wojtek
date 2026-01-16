@@ -1,0 +1,26 @@
+<%- include('partials/header', { title: 'Página no encontrada' }) %>
+
+    <section class="error-page">
+        <div class="container">
+            <div class="error-content" data-aos="fade-up">
+                <div class="error-icon">
+                    <i class="fas fa-tooth"></i>
+                </div>
+                <h1>404</h1>
+                <h2>Página no encontrada</h2>
+                <p>Lo sentimos, la página que buscas no existe o ha sido movida.</p>
+                <div class="error-actions">
+                    <a href="/" class="btn btn-primary btn-lg magnetic">
+                        <i class="fas fa-home"></i>
+                        <span>Volver al Inicio</span>
+                    </a>
+                    <a href="/#cita" class="btn btn-outline btn-lg magnetic">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Pedir Cita</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<%- include('partials/footer') %>

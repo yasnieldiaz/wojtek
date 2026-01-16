@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://wojtek.esix.online/</loc>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://wojtek.esix.online/?lang=pl"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://wojtek.esix.online/?lang=es"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://wojtek.esix.online/?lang=en"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://wojtek.esix.online/?lang=uk"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://wojtek.esix.online/"/>
+        <lastmod>2026-01-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Specialists Page -->
+    <url>
+        <loc>https://wojtek.esix.online/especialistas</loc>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://wojtek.esix.online/especialistas?lang=pl"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://wojtek.esix.online/especialistas?lang=es"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://wojtek.esix.online/especialistas?lang=en"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://wojtek.esix.online/especialistas?lang=uk"/>
+        <lastmod>2026-01-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Privacy Policy -->
+    <url>
+        <loc>https://wojtek.esix.online/privacidad</loc>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://wojtek.esix.online/privacidad?lang=pl"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://wojtek.esix.online/privacidad?lang=es"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://wojtek.esix.online/privacidad?lang=en"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://wojtek.esix.online/privacidad?lang=uk"/>
+        <lastmod>2026-01-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <!-- Terms of Service -->
+    <url>
+        <loc>https://wojtek.esix.online/regulamin</loc>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://wojtek.esix.online/regulamin?lang=pl"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://wojtek.esix.online/regulamin?lang=es"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://wojtek.esix.online/regulamin?lang=en"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://wojtek.esix.online/regulamin?lang=uk"/>
+        <lastmod>2026-01-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <!-- Cookie Policy -->
+    <url>
+        <loc>https://wojtek.esix.online/cookies</loc>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://wojtek.esix.online/cookies?lang=pl"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://wojtek.esix.online/cookies?lang=es"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://wojtek.esix.online/cookies?lang=en"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://wojtek.esix.online/cookies?lang=uk"/>
+        <lastmod>2026-01-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+</urlset>

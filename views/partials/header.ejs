@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Primary Meta Tags -->
+    <title><%= typeof title !== 'undefined' ? title + ' | ' : '' %>Gabinety Borki - <%= t.seo?.tagline || 'Centro Médico Multiespecialidad' %></title>
+    <meta name="title" content="<%= typeof title !== 'undefined' ? title + ' | ' : '' %>Gabinety Borki - <%= t.seo?.tagline || 'Centro Médico Multiespecialidad' %>">
+    <meta name="description" content="<%= t.seo?.description || t.footer.description %>">
+    <meta name="keywords" content="<%= t.seo?.keywords || 'clínica médica, dentista, cardiología, oftalmología, ortopedia, Rybnik, Polonia, Gabinety Borki' %>">
+    <meta name="author" content="Gabinety Borki">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="<%= lang %>">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://wojtek.esix.online<%= typeof currentPath !== 'undefined' ? currentPath : '' %>">
+
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="es" href="https://wojtek.esix.online?lang=es">
+    <link rel="alternate" hreflang="pl" href="https://wojtek.esix.online?lang=pl">
+    <link rel="alternate" hreflang="uk" href="https://wojtek.esix.online?lang=uk">
+    <link rel="alternate" hreflang="en" href="https://wojtek.esix.online?lang=en">
+    <link rel="alternate" hreflang="x-default" href="https://wojtek.esix.online">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wojtek.esix.online/">
+    <meta property="og:title" content="<%= typeof title !== 'undefined' ? title + ' | ' : '' %>Gabinety Borki - Centro Médico">
+    <meta property="og:description" content="<%= t.seo?.description || t.footer.description %>">
+    <meta property="og:image" content="https://wojtek.esix.online/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="<%= lang === 'es' ? 'es_ES' : lang === 'pl' ? 'pl_PL' : lang === 'uk' ? 'uk_UA' : 'en_GB' %>">
+    <meta property="og:site_name" content="Gabinety Borki">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://wojtek.esix.online/">
+    <meta property="twitter:title" content="<%= typeof title !== 'undefined' ? title + ' | ' : '' %>Gabinety Borki - Centro Médico">
+    <meta property="twitter:description" content="<%= t.seo?.description || t.footer.description %>">
+    <meta property="twitter:image" content="https://wojtek.esix.online/images/og-image.png">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="PL-24">
+    <meta name="geo.placename" content="Rybnik">
+    <meta name="geo.position" content="50.1022;18.5463">
+    <meta name="ICBM" content="50.1022, 18.5463">
+
+    <!-- Theme & Favicon -->
+    <meta name="theme-color" content="#6366f1">
+    <meta name="msapplication-TileColor" content="#6366f1">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalClinic",
+        "name": "Gabinety Borki",
+        "alternateName": "Wojtek Medical Center",
+        "url": "https://wojtek.esix.online",
+        "logo": "https://wojtek.esix.online/images/logo.png",
+        "image": "https://wojtek.esix.online/images/og-image.png",
+        "description": "<%= t.footer.description %>",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Borki 20",
+            "addressLocality": "Rybnik",
+            "postalCode": "44-200",
+            "addressCountry": "PL"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 50.1022,
+            "longitude": 18.5463
+        },
+        "telephone": "+48 32 42 47 370",
+        "email": "kontakt@gabinetyborki.pl",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+            }
+        ],
+        "medicalSpecialty": [
+            "Dentistry",
+            "Cardiology",
+            "Ophthalmology",
+            "Orthopedics",
+            "Pediatrics",
+            "Dermatology"
+        ],
+        "priceRange": "$$",
+        "currenciesAccepted": "PLN, EUR",
+        "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "15000",
+            "bestRating": "5"
+        },
+        "sameAs": [
+            "https://facebook.com/gabinetyborki",
+            "https://instagram.com/gabinetyborki"
+        ]
+    }
+    </script>
+</head>
+<body class="lang-transition">
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="tooth-loader">
+                <i class="fas fa-tooth"></i>
+            </div>
+            <span>Gabinety Borki</span>
+        </div>
+    </div>
+
+    <!-- Cursor Effect -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/?lang=<%= lang %>" class="logo">
+                    <img src="/images/logo.png" alt="Gabinety Borki" class="logo-image">
+                </a>
+
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="/?lang=<%= lang %>" class="nav-link <%= page === 'home' ? 'active' : '' %>"><%= t.nav.home %></a></li>
+                        <li><a href="/?lang=<%= lang %>#servicios" class="nav-link"><%= t.nav.services %></a></li>
+                        <li><a href="/?lang=<%= lang %>#nosotros" class="nav-link"><%= t.nav.about %></a></li>
+                        <li><a href="/especialistas?lang=<%= lang %>" class="nav-link <%= page === 'doctors' ? 'active' : '' %>"><%= t.nav.specialists %></a></li>
+                        <li><a href="/?lang=<%= lang %>#testimonios" class="nav-link"><%= t.nav.reviews %></a></li>
+                        <li><a href="/?lang=<%= lang %>#contacto" class="nav-link"><%= t.nav.contact %></a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="language-selector">
+                        <button class="lang-toggle" id="langToggle">
+                            <i class="fas fa-globe"></i>
+                            <span class="current-lang"><%= lang.toUpperCase() %></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="lang-dropdown" id="langDropdown">
+                            <a href="?lang=es" class="lang-option <%= lang === 'es' ? 'active' : '' %>" data-lang="es">
+                                <span class="lang-flag">🇪🇸</span>
+                                <span>Espanol</span>
+                            </a>
+                            <a href="?lang=pl" class="lang-option <%= lang === 'pl' ? 'active' : '' %>" data-lang="pl">
+                                <span class="lang-flag">🇵🇱</span>
+                                <span>Polski</span>
+                            </a>
+                            <a href="?lang=uk" class="lang-option <%= lang === 'uk' ? 'active' : '' %>" data-lang="uk">
+                                <span class="lang-flag">🇺🇦</span>
+                                <span>Ukrainska</span>
+                            </a>
+                            <a href="?lang=en" class="lang-option <%= lang === 'en' ? 'active' : '' %>" data-lang="en">
+                                <span class="lang-flag">🇬🇧</span>
+                                <span>English</span>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="tel:+48<%= clinic.phone.replace(/\s/g, '') %>" class="header-phone">
+                        <div class="phone-icon-wrapper">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="phone-info">
+                            <span class="phone-label"><%= t.header.callUs %></span>
+                            <span class="phone-number"><%= clinic.phone %></span>
+                        </div>
+                    </a>
+                    <a href="/?lang=<%= lang %>#cita" class="btn btn-primary btn-glow">
+                        <span><%= t.header.freeAppointment %></span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>

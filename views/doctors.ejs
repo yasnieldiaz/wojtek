@@ -1,0 +1,123 @@
+<%- include('partials/header', { title: t.nav.specialists }) %>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-bg">
+            <div class="header-gradient"></div>
+            <div class="header-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="page-header-content" data-aos="fade-up">
+                <span class="section-subtitle light"><%= t.specialists.subtitle %></span>
+                <h1><%= t.specialists.title %> <span class="highlight-light"><%= t.specialists.titleHighlight %></span></h1>
+                <p><%= t.specialists.pageTitle %></p>
+
+                <div class="appointment-notice glass-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <span><%= t.specialists.appointmentNotice %> <strong><%= clinic.phone %></strong></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Grid -->
+    <section class="doctors-section">
+        <div class="container">
+            <div class="doctors-grid" id="doctorsGrid">
+                <% doctors.forEach((doctor, index) => { %>
+                <div class="doctor-card glass-card <%= doctor.featured ? 'featured' : '' %>" data-category="<%= doctor.category %>" data-aos="fade-up" data-aos-delay="<%= (index % 4) * 100 %>">
+                    <% if (doctor.featured) { %>
+                    <div class="doctor-badge"><%= t.specialists.medicalDirector %></div>
+                    <% } %>
+
+                    <div class="doctor-image">
+                        <div class="doctor-avatar <%= doctor.name.includes('Anna') || doctor.name.includes('Ewa') || doctor.name.includes('Iwona') || doctor.name.includes('Katarzyna') || doctor.name.includes('Teresa') || doctor.name.includes('Marzena') || doctor.name.includes('Aleksandra') || doctor.name.includes('Barbara') || doctor.name.includes('Agata') || doctor.name.includes('Patrycja') ? 'female' : '' %>">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="doctor-overlay">
+                            <div class="doctor-social">
+                                <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-btn"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="doctor-info">
+                        <h3><%= doctor.name %></h3>
+                        <span class="doctor-role"><%= doctor.role %></span>
+                        <span class="doctor-specialty"><%= doctor.specialty %></span>
+
+                        <p class="doctor-bio"><%= doctor.bio %></p>
+
+                        <div class="doctor-details">
+                            <div class="detail-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span><%= doctor.education %></span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span><%= doctor.experience %> <%= t.specialists.yearsExperience %></span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-globe"></i>
+                                <span><%= doctor.languages.join(', ') %></span>
+                            </div>
+                        </div>
+
+                        <div class="doctor-stats">
+                            <% Object.entries(doctor.stats).forEach(([key, value]) => { %>
+                            <div class="stat">
+                                <strong><%= value %></strong>
+                                <span><%= t.statsLabels[key] || key %></span>
+                            </div>
+                            <% }) %>
+                        </div>
+
+                        <div class="doctor-actions">
+                            <a href="/?lang=<%= lang %>#cita" class="btn btn-primary magnetic">
+                                <i class="fas fa-calendar-check"></i>
+                                <span><%= t.specialists.bookAppointment %></span>
+                            </a>
+                            <a href="#" class="btn btn-outline magnetic">
+                                <i class="fas fa-user"></i>
+                                <span><%= t.specialists.viewProfile %></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="doctors-cta">
+        <div class="cta-bg">
+            <div class="cta-gradient"></div>
+            <div class="cta-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2><%= t.cta.title %></h2>
+                <p><%= t.cta.description %></p>
+                <div class="cta-actions">
+                    <a href="/?lang=<%= lang %>#cita" class="btn btn-white btn-lg magnetic">
+                        <i class="fas fa-calendar-check"></i>
+                        <span><%= t.cta.btnAppointment %></span>
+                    </a>
+                    <a href="tel:+48<%= clinic.phone.replace(/\s/g, '') %>" class="btn btn-outline-white btn-lg magnetic">
+                        <i class="fas fa-phone-alt"></i>
+                        <span><%= clinic.phone %></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,94 @@
+<%- include('partials/header', { title: t.legal.termsTitle }) %>
+
+    <!-- Page Header -->
+    <section class="page-header legal-header">
+        <div class="page-header-bg">
+            <div class="header-gradient"></div>
+        </div>
+        <div class="container">
+            <div class="page-header-content" data-aos="fade-up">
+                <h1><%= t.legal.termsTitle %></h1>
+                <p><%= t.legal.lastUpdated %>: <%= new Date().toLocaleDateString(lang === 'pl' ? 'pl-PL' : lang === 'uk' ? 'uk-UA' : lang === 'en' ? 'en-GB' : 'es-ES') %></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Content -->
+    <section class="legal-content">
+        <div class="container">
+            <div class="legal-wrapper glass-card">
+                <div class="legal-section">
+                    <h2>1. <%= t.legal.generalProvisions %></h2>
+                    <p><%= t.legal.generalProvisionsText %></p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>2. <%= t.legal.servicesOffered %></h2>
+                    <p><%= t.legal.servicesOfferedText %></p>
+                    <ul>
+                        <li><%= t.legal.servicesDentistry %></li>
+                        <li><%= t.legal.servicesCardiology %></li>
+                        <li><%= t.legal.servicesOphthalmology %></li>
+                        <li><%= t.legal.servicesOrthopedics %></li>
+                        <li><%= t.legal.servicesOther %></li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>3. <%= t.legal.appointmentRules %></h2>
+                    <p><%= t.legal.appointmentRulesText %></p>
+                    <ul>
+                        <li><%= t.legal.appointmentPhone %></li>
+                        <li><%= t.legal.appointmentOnline %></li>
+                        <li><%= t.legal.appointmentCancel %></li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>4. <%= t.legal.patientRights %></h2>
+                    <p><%= t.legal.patientRightsText %></p>
+                    <ul>
+                        <li><%= t.legal.rightInfo %></li>
+                        <li><%= t.legal.rightDocs %></li>
+                        <li><%= t.legal.rightConfidentiality %></li>
+                        <li><%= t.legal.rightComplaint %></li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>5. <%= t.legal.patientObligations %></h2>
+                    <p><%= t.legal.patientObligationsText %></p>
+                    <ul>
+                        <li><%= t.legal.obligationInfo %></li>
+                        <li><%= t.legal.obligationPunctual %></li>
+                        <li><%= t.legal.obligationRespect %></li>
+                        <li><%= t.legal.obligationPayment %></li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>6. <%= t.legal.payments %></h2>
+                    <p><%= t.legal.paymentsText %></p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>7. <%= t.legal.liability %></h2>
+                    <p><%= t.legal.liabilityText %></p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>8. <%= t.legal.complaints %></h2>
+                    <p><%= t.legal.complaintsText %></p>
+                    <p><strong>Email:</strong> <%= clinic.email %></p>
+                    <p><strong><%= t.legal.phone %>:</strong> <%= clinic.phone %></p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>9. <%= t.legal.finalProvisions %></h2>
+                    <p><%= t.legal.finalProvisionsText %></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,16 @@
+# Robots.txt for Gabinety Borki
+# https://wojtek.esix.online
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://wojtek.esix.online/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin areas (if any)
+Disallow: /api/
+Disallow: /.git/
+Disallow: /node_modules/

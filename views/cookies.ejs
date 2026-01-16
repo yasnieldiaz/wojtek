@@ -1,0 +1,104 @@
+<%- include('partials/header', { title: t.legal.cookiesTitle }) %>
+
+    <!-- Page Header -->
+    <section class="page-header legal-header">
+        <div class="page-header-bg">
+            <div class="header-gradient"></div>
+        </div>
+        <div class="container">
+            <div class="page-header-content" data-aos="fade-up">
+                <h1><%= t.legal.cookiesTitle %></h1>
+                <p><%= t.legal.lastUpdated %>: <%= new Date().toLocaleDateString(lang === 'pl' ? 'pl-PL' : lang === 'uk' ? 'uk-UA' : lang === 'en' ? 'en-GB' : 'es-ES') %></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Content -->
+    <section class="legal-content">
+        <div class="container">
+            <div class="legal-wrapper glass-card">
+                <div class="legal-section">
+                    <h2>1. <%= t.legal.whatAreCookies %></h2>
+                    <p><%= t.legal.whatAreCookiesText %></p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>2. <%= t.legal.cookiesWeUse %></h2>
+                    <p><%= t.legal.cookiesWeUseText %></p>
+
+                    <h3><%= t.legal.essentialCookies %></h3>
+                    <p><%= t.legal.essentialCookiesText %></p>
+                    <table class="cookies-table">
+                        <tr>
+                            <th><%= t.legal.cookieName %></th>
+                            <th><%= t.legal.cookiePurpose %></th>
+                            <th><%= t.legal.cookieDuration %></th>
+                        </tr>
+                        <tr>
+                            <td>lang</td>
+                            <td><%= t.legal.cookieLangPurpose %></td>
+                            <td>1 <%= t.legal.year %></td>
+                        </tr>
+                        <tr>
+                            <td>session</td>
+                            <td><%= t.legal.cookieSessionPurpose %></td>
+                            <td><%= t.legal.sessionDuration %></td>
+                        </tr>
+                    </table>
+
+                    <h3><%= t.legal.analyticsCookies %></h3>
+                    <p><%= t.legal.analyticsCookiesText %></p>
+                    <table class="cookies-table">
+                        <tr>
+                            <th><%= t.legal.cookieName %></th>
+                            <th><%= t.legal.cookiePurpose %></th>
+                            <th><%= t.legal.cookieDuration %></th>
+                        </tr>
+                        <tr>
+                            <td>_ga</td>
+                            <td>Google Analytics - <%= t.legal.cookieAnalyticsPurpose %></td>
+                            <td>2 <%= t.legal.years %></td>
+                        </tr>
+                        <tr>
+                            <td>_gid</td>
+                            <td>Google Analytics - <%= t.legal.cookieAnalyticsPurpose %></td>
+                            <td>24 <%= t.legal.hours %></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="legal-section">
+                    <h2>3. <%= t.legal.manageCookies %></h2>
+                    <p><%= t.legal.manageCookiesText %></p>
+                    <ul>
+                        <li><strong>Chrome:</strong> <%= t.legal.browserSettings %> > <%= t.legal.privacy %> > Cookies</li>
+                        <li><strong>Firefox:</strong> <%= t.legal.browserSettings %> > <%= t.legal.privacy %> > Cookies</li>
+                        <li><strong>Safari:</strong> <%= t.legal.preferences %> > <%= t.legal.privacy %></li>
+                        <li><strong>Edge:</strong> <%= t.legal.browserSettings %> > <%= t.legal.privacy %> > Cookies</li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>4. <%= t.legal.thirdPartyCookies %></h2>
+                    <p><%= t.legal.thirdPartyCookiesText %></p>
+                    <ul>
+                        <li>Google Analytics (google.com)</li>
+                        <li>Google Maps (google.com)</li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>5. <%= t.legal.cookieConsent %></h2>
+                    <p><%= t.legal.cookieConsentText %></p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>6. <%= t.legal.contactCookies %></h2>
+                    <p><%= t.legal.contactCookiesText %></p>
+                    <p><strong>Email:</strong> <%= clinic.email %></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<%- include('partials/footer') %>

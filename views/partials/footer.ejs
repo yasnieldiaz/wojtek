@@ -1,0 +1,99 @@
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="/?lang=<%= lang %>" class="logo footer-logo">
+                            <img src="/images/logo.png" alt="Gabinety Borki" class="logo-image">
+                        </a>
+                        <p><%= t.footer.description %></p>
+                        <div class="footer-social">
+                            <a href="<%= clinic.social.facebook %>" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="<%= clinic.social.instagram %>" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="<%= clinic.social.twitter %>" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="<%= clinic.social.youtube %>" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="<%= clinic.social.linkedin %>" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-links">
+                        <h4><%= t.footer.ourServices %></h4>
+                        <ul>
+                            <li><a href="/?lang=<%= lang %>#servicios"><%= t.serviceNames.odontologia %></a></li>
+                            <li><a href="/?lang=<%= lang %>#servicios"><%= t.serviceNames.cardiologia %></a></li>
+                            <li><a href="/?lang=<%= lang %>#servicios"><%= t.serviceNames.oftalmologia %></a></li>
+                            <li><a href="/?lang=<%= lang %>#servicios"><%= t.serviceNames.ortopedia %></a></li>
+                            <li><a href="/?lang=<%= lang %>#servicios"><%= t.serviceNames.pediatria %></a></li>
+                            <li><a href="/?lang=<%= lang %>#servicios"><%= t.serviceNames.rehabilitacion %></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links">
+                        <h4><%= t.footer.quickLinks %></h4>
+                        <ul>
+                            <li><a href="/?lang=<%= lang %>#nosotros"><%= t.nav.about %></a></li>
+                            <li><a href="/especialistas?lang=<%= lang %>"><%= t.nav.specialists %></a></li>
+                            <li><a href="/?lang=<%= lang %>#testimonios"><%= t.nav.reviews %></a></li>
+                            <li><a href="/?lang=<%= lang %>#cita"><%= t.header.freeAppointment %></a></li>
+                            <li><a href="/?lang=<%= lang %>#contacto"><%= t.nav.contact %></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-contact">
+                        <h4><%= t.footer.contactInfo %></h4>
+                        <ul>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span><%= clinic.address %></span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <a href="tel:+48<%= clinic.phone.replace(/\s/g, '') %>"><%= clinic.phone %></a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:<%= clinic.email %>"><%= clinic.email %></a>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span><%= t.contact.weekdays %>: <%= t.hours.weekdays %></span>
+                            </li>
+                            <li>
+                                <i class="fas fa-parking"></i>
+                                <span><%= t.footer.parking %></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>&copy; <%= new Date().getFullYear() %> Gabinety Borki. <%= t.footer.allRights %></p>
+                    <div class="footer-legal">
+                        <a href="/privacidad?lang=<%= lang %>"><%= t.legal.privacyTitle %></a>
+                        <a href="/regulamin?lang=<%= lang %>"><%= t.legal.termsTitle %></a>
+                        <a href="/cookies?lang=<%= lang %>"><%= t.legal.cookiesTitle %></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/48<%= clinic.phone.replace(/\s/g, '') %>" class="whatsapp-float" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

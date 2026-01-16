@@ -1,0 +1,625 @@
+<%- include('partials/header') %>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-particles" id="particles"></div>
+        </div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text" data-aos="fade-right">
+                    <h1 class="hero-title">
+                        <span class="title-line animate-slide-up"><%= t.hero.title1 %></span>
+                        <span class="title-line highlight-gradient animate-slide-up delay-1"><%= t.hero.title2 %></span>
+                        <span class="title-line animate-slide-up delay-2"><%= t.hero.title3 %></span>
+                    </h1>
+
+                    <p class="hero-description animate-fade-in delay-3">
+                        <%= t.hero.description %> <%= clinic.stats.years %> <%= t.hero.descriptionYears %>
+                    </p>
+
+                    <div class="hero-offer animate-scale-in delay-4">
+                        <div class="offer-badge pulse"><%= t.hero.offerBadge %></div>
+                        <div class="offer-content">
+                            <span class="offer-discount"><%= t.hero.offerDiscount %></span>
+                            <span class="offer-text"><%= t.hero.offerText %></span>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions animate-fade-in delay-5">
+                        <a href="#cita" class="btn btn-primary btn-lg btn-glow magnetic">
+                            <i class="fas fa-calendar-check"></i>
+                            <span><%= t.hero.btnAppointment %></span>
+                        </a>
+                        <a href="#servicios" class="btn btn-glass btn-lg magnetic">
+                            <i class="fas fa-play-circle"></i>
+                            <span><%= t.hero.btnLearnMore %></span>
+                        </a>
+                    </div>
+
+                    <div class="hero-trust animate-fade-in delay-6">
+                        <div class="trust-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span><%= t.hero.trustLifetime %></span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-credit-card"></i>
+                            <span><%= t.hero.trustFinancing %></span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-clock"></i>
+                            <span><%= t.hero.trustResults %></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual" data-aos="fade-left">
+                    <div class="hero-image-container">
+                        <div class="hero-main-image">
+                            <div class="image-glow"></div>
+                            <div class="hero-smile animate-pulse">
+                                <i class="fas fa-tooth"></i>
+                            </div>
+                            <div class="orbit-ring"></div>
+                            <div class="orbit-ring ring-2"></div>
+                        </div>
+
+                        <div class="floating-card card-rating glass-card animate-float">
+                            <div class="card-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-value counter" data-target="4.9">0</span>
+                                <span class="card-label">+15,000 <%= t.hero.reviews %></span>
+                            </div>
+                        </div>
+
+                        <div class="floating-card card-patients glass-card animate-float delay-1">
+                            <div class="card-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-value"><span class="counter" data-target="50">0</span>K+</span>
+                                <span class="card-label"><%= t.hero.happyPatients %></span>
+                            </div>
+                        </div>
+
+                        <div class="floating-card card-experience glass-card animate-float delay-2">
+                            <div class="card-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-value"><span class="counter" data-target="<%= clinic.stats.years %>">0</span>+</span>
+                                <span class="card-label"><%= t.hero.yearsExperience %></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll-indicator">
+            <span><%= t.hero.scrollDiscover %></span>
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card glass-card" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="stat-icon">
+                        <i class="fas fa-tooth"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">
+                            <span class="counter" data-target="<%= clinic.stats.treatments %>">0</span>
+                        </div>
+                        <div class="stat-label"><%= t.stats.treatments %></div>
+                    </div>
+                    <div class="stat-bar"><div class="stat-bar-fill" data-fill="95"></div></div>
+                </div>
+
+                <div class="stat-card glass-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">
+                            <span class="counter" data-target="<%= clinic.stats.specialists %>">0</span>
+                        </div>
+                        <div class="stat-label"><%= t.stats.specialists %></div>
+                    </div>
+                    <div class="stat-bar"><div class="stat-bar-fill" data-fill="85"></div></div>
+                </div>
+
+                <div class="stat-card glass-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">
+                            <span class="counter" data-target="<%= clinic.stats.satisfaction %>">0</span>%
+                        </div>
+                        <div class="stat-label"><%= t.stats.satisfaction %></div>
+                    </div>
+                    <div class="stat-bar"><div class="stat-bar-fill" data-fill="98"></div></div>
+                </div>
+
+                <div class="stat-card glass-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">
+                            <span class="counter" data-target="<%= clinic.stats.awards %>">0</span>
+                        </div>
+                        <div class="stat-label"><%= t.stats.awards %></div>
+                    </div>
+                    <div class="stat-bar"><div class="stat-bar-fill" data-fill="75"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle"><%= t.services.subtitle %></span>
+                <h2 class="section-title"><%= t.services.title %> <span class="highlight-gradient"><%= t.services.titleHighlight %></span></h2>
+                <p class="section-description"><%= t.services.description %></p>
+            </div>
+
+            <div class="services-grid">
+                <% services.forEach((service, index) => { %>
+                <div class="service-card <%= service.featured ? 'featured' : '' %> glass-card" data-aos="fade-up" data-aos-delay="<%= index * 100 %>" id="<%= service.id %>">
+                    <% if (service.featured) { %>
+                    <div class="service-badge pulse"><%= t.services.popular %></div>
+                    <% } %>
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <i class="fas <%= service.icon %>"></i>
+                        </div>
+                        <div class="service-icon-bg"></div>
+                    </div>
+                    <div class="service-content">
+                        <h3><%= service.title %></h3>
+                        <p><%= service.description %></p>
+                        <ul class="service-features">
+                            <% service.features.forEach(feature => { %>
+                            <li><i class="fas fa-check"></i> <%= feature %></li>
+                            <% }) %>
+                        </ul>
+                        <div class="service-price">
+                            <span class="price-from"><%= t.services.from %></span>
+                            <span class="price-value"><%= service.price %></span>
+                        </div>
+                    </div>
+                    <a href="#cita" class="service-link magnetic">
+                        <span><%= t.services.moreInfo %></span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <% }) %>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-images" data-aos="fade-right">
+                    <div class="about-image-main glass-card">
+                        <div class="image-placeholder-pro">
+                            <i class="fas fa-hospital"></i>
+                            <span><%= t.about.premiumFacilities %></span>
+                        </div>
+                    </div>
+                    <div class="about-image-secondary glass-card">
+                        <div class="image-placeholder-pro">
+                            <i class="fas fa-microscope"></i>
+                            <span><%= t.about.technology3D %></span>
+                        </div>
+                    </div>
+                    <div class="about-experience-badge animate-pulse">
+                        <span class="experience-number"><%= clinic.stats.years %></span>
+                        <span class="experience-text"><%= t.about.yearsExcellence %></span>
+                    </div>
+                </div>
+
+                <div class="about-text" data-aos="fade-left">
+                    <span class="section-subtitle"><%= t.about.subtitle %></span>
+                    <h2 class="section-title"><%= t.about.title %> <span class="highlight-gradient"><%= t.about.titleHighlight %></span> <%= t.about.titleEnd %></h2>
+                    <p class="about-description"><%= t.about.description %></p>
+
+                    <div class="about-features">
+                        <div class="about-feature glass-card">
+                            <div class="feature-icon gradient-bg">
+                                <i class="fas fa-microscope"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4><%= t.about.featureTech %></h4>
+                                <p><%= t.about.featureTechDesc %></p>
+                            </div>
+                        </div>
+                        <div class="about-feature glass-card">
+                            <div class="feature-icon gradient-bg">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4><%= t.about.featureTeam %></h4>
+                                <p><%= t.about.featureTeamDesc %></p>
+                            </div>
+                        </div>
+                        <div class="about-feature glass-card">
+                            <div class="feature-icon gradient-bg">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4><%= t.about.featureCare %></h4>
+                                <p><%= t.about.featureCareDesc %></p>
+                            </div>
+                        </div>
+                        <div class="about-feature glass-card">
+                            <div class="feature-icon gradient-bg">
+                                <i class="fas fa-piggy-bank"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4><%= t.about.featureFinancing %></h4>
+                                <p><%= t.about.featureFinancingDesc %></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-cta">
+                        <a href="/especialistas?lang=<%= lang %>" class="btn btn-primary btn-lg magnetic">
+                            <i class="fas fa-users"></i>
+                            <span><%= t.about.meetTeam %></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialists Preview -->
+    <section class="specialists-preview">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle"><%= t.specialists.subtitle %></span>
+                <h2 class="section-title"><%= t.specialists.title %> <span class="highlight-gradient"><%= t.specialists.titleHighlight %></span></h2>
+                <p class="section-description"><%= t.specialists.description %></p>
+            </div>
+
+            <div class="specialists-grid" data-aos="fade-up">
+                <% doctors.forEach((doctor, index) => { %>
+                <div class="specialist-card glass-card" data-aos="zoom-in" data-aos-delay="<%= index * 100 %>">
+                    <div class="specialist-image">
+                        <div class="specialist-avatar <%= doctor.name.includes('Anna') || doctor.name.includes('Ewa') || doctor.name.includes('Iwona') || doctor.name.includes('Katarzyna') || doctor.name.includes('Teresa') || doctor.name.includes('Marzena') || doctor.name.includes('Aleksandra') || doctor.name.includes('Barbara') || doctor.name.includes('Agata') || doctor.name.includes('Patrycja') ? 'female' : '' %>">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="specialist-overlay">
+                            <div class="specialist-social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="specialist-info">
+                        <h3><%= doctor.name %></h3>
+                        <span class="specialist-role"><%= doctor.role %></span>
+                        <span class="specialist-specialty"><%= doctor.specialty %></span>
+                        <div class="specialist-stats">
+                            <div class="spec-stat">
+                                <strong><%= doctor.experience %></strong>
+                                <span><%= t.specialists.yearsExp %></span>
+                            </div>
+                            <div class="spec-stat">
+                                <strong><%= Object.values(doctor.stats)[0] %></strong>
+                                <span><%= t.statsLabels[Object.keys(doctor.stats)[0]] || Object.keys(doctor.stats)[0] %></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+
+            <div class="specialists-cta" data-aos="fade-up">
+                <a href="/especialistas?lang=<%= lang %>" class="btn btn-primary btn-lg btn-glow magnetic">
+                    <span><%= t.specialists.viewAll %></span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonios">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle"><%= t.testimonials.subtitle %></span>
+                <h2 class="section-title"><%= t.testimonials.title %> <span class="highlight-gradient"><%= t.testimonials.titleHighlight %></span></h2>
+                <div class="testimonials-rating">
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="rating-text">4.9/5 <strong>+15,000</strong> <%= t.testimonials.verifiedReviews %></span>
+                    <div class="rating-source">
+                        <i class="fab fa-google"></i>
+                        <span>Google Reviews</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonials-grid">
+                <% testimonials.forEach((testimonial, index) => { %>
+                <div class="testimonial-card glass-card <%= testimonial.featured ? 'featured' : '' %>" data-aos="fade-up" data-aos-delay="<%= index * 100 %>">
+                    <% if (testimonial.featured) { %>
+                    <div class="testimonial-badge"><%= t.testimonials.featured %></div>
+                    <% } %>
+                    <div class="testimonial-rating">
+                        <% for(let i = 0; i < testimonial.rating; i++) { %>
+                        <i class="fas fa-star"></i>
+                        <% } %>
+                    </div>
+                    <p class="testimonial-text">"<%= testimonial.text %>"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <span><%= testimonial.initials %></span>
+                        </div>
+                        <div class="author-info">
+                            <strong><%= testimonial.name %></strong>
+                            <span><%= testimonial.treatment %></span>
+                        </div>
+                        <% if (testimonial.verified) { %>
+                        <div class="testimonial-verified">
+                            <i class="fas fa-check-circle"></i>
+                            <span><%= t.testimonials.verified %></span>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+
+            <div class="testimonials-logos" data-aos="fade-up">
+                <span><%= t.testimonials.recognizedBy %></span>
+                <div class="logos-grid">
+                    <div class="logo-item glass-card"><i class="fab fa-google"></i> Google</div>
+                    <div class="logo-item glass-card"><i class="fas fa-award"></i> Top Doctors</div>
+                    <div class="logo-item glass-card"><i class="fas fa-certificate"></i> ISO 9001</div>
+                    <div class="logo-item glass-card"><i class="fas fa-star"></i> Invisalign</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section class="appointment" id="cita">
+        <div class="appointment-bg">
+            <div class="appointment-gradient"></div>
+            <div class="appointment-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="appointment-content">
+                <div class="appointment-info" data-aos="fade-right">
+                    <span class="section-subtitle light"><%= t.appointment.subtitle %></span>
+                    <h2 class="section-title light"><%= t.appointment.title %> <span class="highlight-light"><%= t.appointment.titleHighlight %></span></h2>
+                    <p class="appointment-description"><%= t.appointment.description %></p>
+
+                    <div class="appointment-benefits">
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="benefit-text">
+                                <strong><%= t.appointment.benefitConsult %></strong>
+                                <span><%= t.appointment.benefitConsultDesc %></span>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="benefit-text">
+                                <strong><%= t.appointment.benefitDiag %></strong>
+                                <span><%= t.appointment.benefitDiagDesc %></span>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="benefit-text">
+                                <strong><%= t.appointment.benefitPlan %></strong>
+                                <span><%= t.appointment.benefitPlanDesc %></span>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="benefit-text">
+                                <strong><%= t.appointment.benefitFinancing %></strong>
+                                <span><%= t.appointment.benefitFinancingDesc %></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="appointment-contact">
+                        <a href="tel:+48<%= clinic.phone.replace(/\s/g, '') %>" class="contact-method glass-card">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <span><%= t.appointment.callFree %></span>
+                                <strong><%= clinic.phone %></strong>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/48<%= clinic.phone.replace(/\s/g, '') %>" class="contact-method glass-card whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <span><%= t.appointment.whatsapp %></span>
+                                <strong><%= clinic.whatsapp %></strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="appointment-form-wrapper glass-card" data-aos="fade-left">
+                    <form class="appointment-form" id="appointmentForm">
+                        <div class="form-header">
+                            <h3><%= t.appointment.formTitle %></h3>
+                            <p><%= t.appointment.formSubtitle %></p>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <div class="input-wrapper">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="nombre" name="nombre" placeholder="<%= t.appointment.formName %>" required>
+                                    <span class="input-focus"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-wrapper">
+                                    <i class="fas fa-phone"></i>
+                                    <input type="tel" id="telefono" name="telefono" placeholder="<%= t.appointment.formPhone %>" required>
+                                    <span class="input-focus"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <div class="input-wrapper">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="email" name="email" placeholder="<%= t.appointment.formEmail %>" required>
+                                    <span class="input-focus"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <div class="input-wrapper">
+                                    <i class="fas fa-tooth"></i>
+                                    <select id="tratamiento" name="tratamiento" required>
+                                        <option value=""><%= t.appointment.formTreatment %></option>
+                                        <% services.forEach(service => { %>
+                                        <option value="<%= service.id %>"><%= service.title %></option>
+                                        <% }) %>
+                                        <option value="otro"><%= t.appointment.formOther %></option>
+                                    </select>
+                                    <span class="input-focus"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <div class="input-wrapper textarea">
+                                    <i class="fas fa-comment"></i>
+                                    <textarea id="mensaje" name="mensaje" placeholder="<%= t.appointment.formMessage %>" rows="3"></textarea>
+                                    <span class="input-focus"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="privacidad" required>
+                                    <span class="checkmark"></span>
+                                    <span><%= t.appointment.formPrivacy %> <a href="/privacidad?lang=<%= lang %>"><%= t.appointment.formPrivacyLink %></a></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-submit btn-glow magnetic">
+                            <span><%= t.appointment.formSubmit %></span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+
+                        <div class="form-footer">
+                            <i class="fas fa-lock"></i>
+                            <span><%= t.appointment.formSecure %></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle"><%= t.contact.subtitle %></span>
+                <h2 class="section-title"><%= t.contact.title %> <span class="highlight-gradient"><%= t.contact.titleHighlight %></span></h2>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card glass-card" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="contact-icon gradient-bg">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3><%= t.contact.address %></h3>
+                    <p><%= clinic.address %></p>
+                    <a href="https://maps.google.com/?q=<%= encodeURIComponent(clinic.address) %>" target="_blank" class="contact-link magnetic">
+                        <span><%= t.contact.viewMap %></span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="contact-card glass-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="contact-icon gradient-bg">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3><%= t.contact.phone %></h3>
+                    <p><strong><%= clinic.phone %></strong><br><%= t.contact.freeCall %></p>
+                    <a href="tel:+48<%= clinic.phone.replace(/\s/g, '') %>" class="contact-link magnetic">
+                        <span><%= t.contact.callNow %></span>
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+
+                <div class="contact-card glass-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="contact-icon gradient-bg">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3><%= t.contact.schedule %></h3>
+                    <p><%= t.contact.weekdays %>: <%= t.hours.weekdays %><br><%= t.contact.saturday %>: <%= t.hours.saturday %></p>
+                    <a href="#cita" class="contact-link magnetic">
+                        <span><%= t.contact.bookAppointment %></span>
+                        <i class="fas fa-calendar"></i>
+                    </a>
+                </div>
+
+                <div class="contact-card glass-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="contact-icon gradient-bg">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3><%= t.contact.email %></h3>
+                    <p><%= clinic.email %></p>
+                    <a href="mailto:<%= clinic.email %>" class="contact-link magnetic">
+                        <span><%= t.contact.sendEmail %></span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-map glass-card" data-aos="fade-up">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2554.8892371823365!2d18.528679476896!3d50.10019381502771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4711329e5f82a7d1%3A0x5a9c7e0c5f7b7c5d!2sul.%20Borki%2020%2C%2044-200%20Rybnik%2C%20Polonia!5e0!3m2!1ses!2spl!4v1704067200000!5m2!1ses!2spl"
+                    width="100%"
+                    height="450"
+                    style="border:0; border-radius: 20px;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+<%- include('partials/footer') %>

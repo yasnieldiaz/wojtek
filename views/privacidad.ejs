@@ -1,0 +1,98 @@
+<%- include('partials/header', { title: t.legal.privacyTitle }) %>
+
+    <!-- Page Header -->
+    <section class="page-header legal-header">
+        <div class="page-header-bg">
+            <div class="header-gradient"></div>
+        </div>
+        <div class="container">
+            <div class="page-header-content" data-aos="fade-up">
+                <h1><%= t.legal.privacyTitle %></h1>
+                <p><%= t.legal.lastUpdated %>: <%= new Date().toLocaleDateString(lang === 'pl' ? 'pl-PL' : lang === 'uk' ? 'uk-UA' : lang === 'en' ? 'en-GB' : 'es-ES') %></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Content -->
+    <section class="legal-content">
+        <div class="container">
+            <div class="legal-wrapper glass-card">
+                <div class="legal-section">
+                    <h2>1. <%= t.legal.dataController %></h2>
+                    <p><%= t.legal.dataControllerText %></p>
+                    <ul>
+                        <li><strong><%= t.legal.companyName %>:</strong> Gabinety Borki Sp. z o.o.</li>
+                        <li><strong><%= t.legal.address %>:</strong> <%= clinic.address %></li>
+                        <li><strong><%= t.legal.email %>:</strong> <%= clinic.email %></li>
+                        <li><strong><%= t.legal.phone %>:</strong> <%= clinic.phone %></li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>2. <%= t.legal.dataCollected %></h2>
+                    <p><%= t.legal.dataCollectedText %></p>
+                    <ul>
+                        <li><%= t.legal.dataName %></li>
+                        <li><%= t.legal.dataEmail %></li>
+                        <li><%= t.legal.dataPhone %></li>
+                        <li><%= t.legal.dataHealth %></li>
+                        <li><%= t.legal.dataIP %></li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>3. <%= t.legal.purposeTitle %></h2>
+                    <p><%= t.legal.purposeText %></p>
+                    <ul>
+                        <li><%= t.legal.purposeAppointment %></li>
+                        <li><%= t.legal.purposeMedical %></li>
+                        <li><%= t.legal.purposeContact %></li>
+                        <li><%= t.legal.purposeMarketing %></li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>4. <%= t.legal.legalBasis %></h2>
+                    <p><%= t.legal.legalBasisText %></p>
+                    <ul>
+                        <li><strong><%= t.legal.gdprArt6 %></strong></li>
+                        <li><%= t.legal.consent %></li>
+                        <li><%= t.legal.contract %></li>
+                        <li><%= t.legal.legalObligation %></li>
+                        <li><%= t.legal.vitalInterest %></li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>5. <%= t.legal.rightsTitle %></h2>
+                    <p><%= t.legal.rightsText %></p>
+                    <ul>
+                        <li><%= t.legal.rightAccess %></li>
+                        <li><%= t.legal.rightRectification %></li>
+                        <li><%= t.legal.rightErasure %></li>
+                        <li><%= t.legal.rightRestriction %></li>
+                        <li><%= t.legal.rightPortability %></li>
+                        <li><%= t.legal.rightObjection %></li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>6. <%= t.legal.retentionTitle %></h2>
+                    <p><%= t.legal.retentionText %></p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>7. <%= t.legal.securityTitle %></h2>
+                    <p><%= t.legal.securityText %></p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>8. <%= t.legal.contactDPO %></h2>
+                    <p><%= t.legal.contactDPOText %></p>
+                    <p><strong>Email:</strong> <%= clinic.email %></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<%- include('partials/footer') %>
